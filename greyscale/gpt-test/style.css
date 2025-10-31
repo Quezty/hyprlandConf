@@ -1,0 +1,21 @@
+
+window#waybar {
+  background: rgba(20,20,20,0.7);
+  border-radius: 10px;
+  color: #cfcfcf;
+  padding: 0px 6px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+#clock {
+  color: #e64545; /* Accent color */
+}
+
+#cpu, #memory, #battery, #pulseaudio, #network {
+  background: rgba(40,40,40,0.6);
+  border-radius: 8px;
+  margin: 0 6px;
+  padding: 0 10px;
+}

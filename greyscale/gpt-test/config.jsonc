@@ -1,0 +1,13 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "margin": "6 20 0 20",
+  "modules-left": ["clock"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "network"],
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %B %d, %Y}"
+  }
+}

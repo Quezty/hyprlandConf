@@ -1,0 +1,58 @@
+window#waybar {
+    font-family: Victor mono;
+    background: transparent;
+    color: white;
+}
+
+.modules-left{
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: rgba(55, 55, 55, 0.65);
+} 
+
+#custom-operatingSystem{
+    margin-left: 4px;
+    margin-right: 8px;
+    color: rgb(186, 225, 255);
+}
+
+#workspaces button.active {
+    color: rgb(186, 225, 255);
+} 
+
+#workspaces button:hover {
+    color: rgba(31, 31, 31, 0.35);
+}
+
+.modules-right{
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#battery, #clock, #tray, #pulseaudio, #custom-powerOff{
+    margin-left: 6px;
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+#pulseaudio{
+    color: rgb(186, 255, 201);
+}
+
+#network{
+    color:rgb(186, 225, 255)
+}
+
+#battery{
+    color: rgb(255, 189, 189);
+}
+
+#clock{
+    font-weight: 600;
+}
+
+#custom-powerOff{
+    color: rgb(255, 255, 186);
+}

@@ -1,0 +1,47 @@
+window#waybar {
+    font-family: Victor mono;
+    background: #2e3440;
+    color: white;
+    font-size: 14px;
+}
+
+.modules-left{
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+} 
+
+#mpris{
+    margin-left: 12px;
+}
+
+#custom-operatingSystem{
+    margin-left: 4px;
+    margin-right: 8px;
+    color: #81a1c1;
+}
+
+#workspaces button.active {
+    color: #81a1c1;
+} 
+
+#workspaces button:hover {
+    color: rgb(186, 225, 255);
+    background: rgba(186, 225, 255, 0.35);
+}
+
+.modules-right{
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#battery, #clock, #tray, #pulseaudio, #custom-powerOff{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#network, #batter, #custom-powerOff{
+    color: #81a1c1;
+    font-size: 15px;
+}

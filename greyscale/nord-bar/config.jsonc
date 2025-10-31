@@ -1,0 +1,110 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+        // Choose the order of the modules
+        "modules-left": ["custom/operatingSystem", "hyprland/workspaces", "mpris"],
+        "modules-center": ["hyprland/window"],
+        "modules-right": ["network", "pulseaudio", "battery", "clock", "custom/powerOff"],
+
+
+        //***************************
+        //*  Modules configuration  *
+        //***************************
+
+    "hyprland/window" : {
+        "format" : "{}",
+        "icon" : true,
+        "max-length": 15 
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": "{icon}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "1": ["DP-1"],
+            "2": ["HDMI-A-2"],
+            "3": ["HDMI-A-2"],
+            "4": ["DP-1"]
+        },
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "urgent": "",
+            "default": ""
+        },
+        "sort-by-number": true
+    },
+
+    "mpris": {
+    	"format": "{player_icon}   {dynamic}",
+    	"format-paused": "{status_icon}   <i>{dynamic}</i>",
+    	"player-icons": {
+    		"default": "⏸ ",
+    		"mpv": "🎵"
+    	},
+    	"status-icons": {
+    		"paused": "▶ "
+    	},
+        "dynamic-len": 20,
+        "dynamic-importance-order": [
+            "title",
+            "artist",
+            "length",
+            "album",
+            "position"
+        ]
+    	// "ignored-players": ["firefox"]
+    },
+
+    "pulseaudio" : {
+       "format" : "<span foreground='#81a1c1'> </span>  {volume}",
+       "format-muted": "󰖁",
+       "format-icons" : {
+        "muted" : "󰖁",
+        "high" : "",
+        "low" : ""
+       },
+       "on-click" : "pavucontrol",
+       "tooltip-format": "{desc}: {volume}"
+	},
+
+	"network" : {
+		"format-wifi" : " ",
+        "tooltip-format-wifi": "{essid}, {ipaddr}/{cidr}",
+        "format-ethernet": "󰈀 ",
+		"tooltip-format-ethernet" : "{ipaddr}/{cidr}",
+		"format-disconnected" : "󰈂 ",
+        "on-click": "nm-applet --indicator"
+	},
+        
+    "battery" : {
+	    "format": "<span foreground='#81a1c1'>󰁹</span> {capacity}%",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M  %D}"
+    },
+
+    "custom/powerOff": {
+        "format": "",
+        "on-click": "shutdown now",
+        "tooltip-format": "turn off"
+    },
+
+    "custom/operatingSystem": {
+        "format": "",
+        "on-click": "kitty neofetch",
+        "tooltip-format": "NixOS"
+    }
+
+}
